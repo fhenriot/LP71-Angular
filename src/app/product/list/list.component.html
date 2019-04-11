@@ -1,3 +1,15 @@
-<ul>
-  <li *ngFor="let product of products">{{product.name}}</li>
-</ul>
+<div class="row">
+  <div class="card col-sm-3" style="width:400px" *ngFor="let product of products">
+    <img class="card-img-top" src={{product.image}} alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">
+        {{product.name}}
+        <span class="badge badge-primary badge-pill">{{product.price}} €</span>
+      </h4>
+      <p class="card-text">{{product.description}}</p>
+      <a href="#" class="btn btn-primary">Commander</a>
+    </div>
+  </div>
+</div>
+
+
